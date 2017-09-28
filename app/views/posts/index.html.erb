@@ -11,6 +11,9 @@
     <p class="post-comment">
       <%= post.comment %>
     </p>
+    <p class="post-user">
+      <%= post.user.email %>
+    </p>
     <br>
     <%= link_to 'Show', post %>
     <%= link_to 'Edit', edit_post_path(post) %>
