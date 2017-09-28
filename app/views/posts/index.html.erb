@@ -1,0 +1,21 @@
+<h1>Posts</h1>
+
+<%= link_to 'New Post', new_post_path %>
+
+<% @posts.each do |post| %>
+
+  <div class="insta-post">
+    <p>
+    <%= image_tag post.image_url, alt: post.comment %>
+    </p>
+    <p class="post-comment">
+      <%= post.comment %>
+    </p>
+    <br>
+    <%= link_to 'Show', post %>
+    <%= link_to 'Edit', edit_post_path(post) %>
+    <%= link_to 'Destroy', post, method: :delete, data: {
+       confirm: 'Are you sure?' } %>
+       <br>
+  </div>
+    <% end %>
