@@ -14,6 +14,9 @@
     <p class="post-user">
       <%= post.user.email %>
     </p>
+    <p class="post-user">
+      <%= image_tag @user.avatar.url %>
+    </p>
     <br>
     <%= link_to 'Show', post %>
     <%= link_to 'Edit', edit_post_path(post) %>
